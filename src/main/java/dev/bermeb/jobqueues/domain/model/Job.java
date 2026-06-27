@@ -2,9 +2,10 @@ package dev.bermeb.jobqueues.domain.model;
 
 import java.time.Instant;
 import java.util.Map;
+import java.util.UUID;
 
 public record Job (
-        String jobId,
+        UUID jobId,
         String type,
         Map<String, Object> data,
         Instant createdAt
