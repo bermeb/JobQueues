@@ -5,7 +5,7 @@ import dev.bermeb.jobqueues.domain.model.Job;
 public interface ProcessJobPort {
 
     /**
-     * Returns the typ of jobs the process can run
+     * Returns the type of jobs the process can run
      */
     String getType();
 
