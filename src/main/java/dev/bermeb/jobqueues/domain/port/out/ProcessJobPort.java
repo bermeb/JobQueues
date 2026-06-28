@@ -11,6 +11,7 @@ public interface ProcessJobPort {
 
     /**
      * Runs the domain-specific logic
+     * @param job The job to process
      */
     void process(Job job) throws Exception;
 
