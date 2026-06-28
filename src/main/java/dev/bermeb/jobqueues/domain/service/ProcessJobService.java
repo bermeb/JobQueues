@@ -35,12 +35,12 @@ public class ProcessJobService implements ProcessJob {
                 LOG.info("Job {} has already been completed.", jobId);
                 return;
             }
-            if (jobState == Job.JobState.PROCESSING) {
-                LOG.info("Job {} is currently being processed.", jobId);
-                return;
-            }
             if (jobState == Job.JobState.FAILED) {
                 LOG.error("Job {} has failed.", jobId);
+                return;
+            }
+            if (jobState == Job.JobState.PROCESSING) {
+                LOG.info("Job {} is currently being processed.", jobId);
                 return;
             }
         }
